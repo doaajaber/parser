@@ -6,7 +6,7 @@
 
 
 
-token = "kk"   # dah global variable
+token = ""   # dah global variable
 
 def Error():            # al function dy al mfrood tw2f al brnamg w ttl3 error message
     print("Error")
