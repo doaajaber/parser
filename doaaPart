@@ -1,0 +1,62 @@
+from xml.etree import ElementTree as ET
+
+
+token = "DoaaIsBeautiful"   # global variable
+
+
+
+def read-stmt ():
+
+    match("read")
+    match("identifier")
+  #  print("read")
+
+
+def if-stmt ():
+    match("if")
+    exp() 
+    match("then")
+    stmt_seq()
+    if (token=="end") :
+        match("end")
+
+    else if (token=="else"):
+        match("else")
+        stmt_seq()
+        match("end")
+
+def term ():
+    if (token=="term"):
+        term()
+        mulop()
+        factor()
+
+    else if (token=="factor"):
+        factor()
+
+
+def mulop() : 
+        if (token=="*"):
+            match("*")
+
+        else if (token=="/") : 
+             match("/")
+
+def factor() : 
+    if (token=="(") :
+        match("(")
+        exp()
+        match(")")
+
+    else if (token=="number")
+         match ("number")
+
+    else if (token=="identifier")
+        
+
+
+
+
+
+
+
